@@ -425,18 +425,6 @@ split
 			return settings["powerSubstation"];
 		}
 		
-		if (current.map == 200 && current.cutscene > old.cutscene && vars.finishedPowerSubstation == 0)
-		{
-			vars.finishedPowerSubstation = 1;
-			return settings["finishedPowerSubstation"];
-		}
-		
-		if (current.map == 204 && current.cutscene > old.cutscene && vars.kitebrosControl == 0)
-		{
-			vars.kitebrosControl = 1;
-			return settings["kitebrosControl"];
-		}
-		
 		if (current.map == 206 && vars.reachedSewers == 0)
 		{
 			vars.reachedSewers = 1;
@@ -447,12 +435,6 @@ split
 		{
 			vars.sewersExit = 1;
 			return settings["sewersExit"];
-		}
-		
-		if (current.map == 231 && current.bossHP < 1 && vars.flameNemmy == 0)
-		{
-			vars.flameNemmy = 1;
-			return settings["flameNemmy"];
 		}
 		
 		if (current.map == 124 && vars.kendos == 0)
@@ -485,18 +467,6 @@ split
 			return settings["subwayTunnelExit"];
 		}
 		
-		if (current.map == 242 && current.bossHP < 1 && vars.clockNemmy == 0)
-		{
-			vars.clockNemmy = 1;
-			return settings["clockNemmy"];
-		}
-		
-		if (current.map == 243 && current.weapon1 != 21 && current.weapon2 != 21 && current.weapon3 != 21 && current.weapon4 != 21 && vars.defendedJill == 0)
-		{
-			vars.defendedJill = 1;
-			return settings["defendedJill"];
-		}
-		
 		if (current.map == 294 && vars.hospitalLift == 0)
 		{
 			vars.hospitalLift = 1;
@@ -508,18 +478,6 @@ split
 			vars.nest2 = 1;
 			return settings["nest2"];
 		}
-		
-		if (current.map == 316 && !(current.bossHP >= 1) && vars.disposalNemmy == 0)
-		{
-			vars.disposalNemmy = 1;
-			return settings["disposalNemmy"];
-		}
-		
-		if (current.map == 319 && current.bossHP != 8000  && vars.finalNemmy == 0)
-		{
-			vars.finalNemmy = 1;
-			return settings["finalNemmy"];
-		}
 	}
 	
 	//End split
@@ -527,6 +485,48 @@ split
 	{
 		vars.end = 1;
 		return settings["end"];
+	}
+	
+	if (current.map == 200 && current.cutscene > old.cutscene && vars.finishedPowerSubstation == 0)
+	{
+		vars.finishedPowerSubstation = 1;
+		return settings["finishedPowerSubstation"];
+	}
+		
+	if (current.map == 204 && current.cutscene > old.cutscene && vars.kitebrosControl == 0)
+	{
+		vars.kitebrosControl = 1;
+		return settings["kitebrosControl"];
+	}
+	
+	if (current.map == 242 && current.bossHP < 1 && vars.clockNemmy == 0)
+	{
+		vars.clockNemmy = 1;
+		return settings["clockNemmy"];
+	}
+	
+	if (current.map == 231 && current.bossHP < 1 && vars.flameNemmy == 0)
+	{
+		vars.flameNemmy = 1;
+		return settings["flameNemmy"];
+	}
+	
+	if (current.map == 243 && current.weapon1 != 21 && current.weapon2 != 21 && current.weapon3 != 21 && current.weapon4 != 21 && vars.defendedJill == 0)
+	{
+		vars.defendedJill = 1;
+		return settings["defendedJill"];
+	}
+	
+	if (current.map == 316 && !(current.bossHP >= 1) && vars.disposalNemmy == 0)
+	{
+		vars.disposalNemmy = 1;
+		return settings["disposalNemmy"];
+	}
+	
+	if (current.map == 319 && current.bossHP != 8000  && vars.finalNemmy == 0)
+	{
+		vars.finalNemmy = 1;
+		return settings["finalNemmy"];
 	}
 }
 
