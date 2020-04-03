@@ -481,7 +481,7 @@ split
 	}
 	
 	//End split
-	if (current.map == 0 && old.map == 323 && vars.end == 0)
+	if (current.map == 0 && old.map == 323 && && current.weapon1 != old.weapon1 && vars.end == 0)
 	{
 		vars.end = 1;
 		return settings["end"];
