@@ -523,7 +523,7 @@ split
 		return settings["disposalNemmy"];
 	}
 	
-	if (current.map == 319 && current.bossHP != 8000  && vars.finalNemmy == 0)
+	if (current.map == 319 && current.bossHP < 5000  && vars.finalNemmy == 0)
 	{
 		vars.finalNemmy = 1;
 		return settings["finalNemmy"];
