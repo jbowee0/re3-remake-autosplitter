@@ -45,7 +45,7 @@ startup
 	settings.Add("part3", true, "Part 3");
 	settings.Add("carlosRPDStart", true, "Carlos RPD Start", "part3");
 	settings.Add("battery", true, "Battery (for detonator)", "part3");
-	settings.Add("detonator", true, "Detonator", "part3");
+	settings.Add("emptyDetonator", true, "Detonator", "part3");
 	settings.Add("stars", true, "Reached STARS Office", "part3");
 	
 	settings.Add("part4", true, "Part 4");
