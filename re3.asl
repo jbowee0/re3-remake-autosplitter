@@ -129,6 +129,7 @@ update
 	
 	if (timer.CurrentPhase == TimerPhase.NotRunning)
 	{
+		vars.reachedEnd = 0;
 		vars.battery = 0;
 		vars.emptyDetonator = 0;
 		vars.tapePlayer = 0;
@@ -174,6 +175,11 @@ update
 		vars.disposalNemmy = 0;
 		vars.finalNemmy = 0;
 		vars.end = 0;
+	}
+	
+	if (current.map == 323)
+	{
+		vars.reachedEnd = 1;
 	}
 }
 
@@ -481,7 +487,7 @@ split
 	}
 	
 	//End split
-	if (current.map == 0 && old.map == 323 && current.weapon1 != old.weapon1 && vars.end == 0)
+	if (vars.reachedEnd == 1 && current.map == 0 && current.weapon1 != old.weapon1)
 	{
 		vars.end = 1;
 		return settings["end"];
