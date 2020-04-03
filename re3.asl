@@ -27,6 +27,7 @@ startup
 	settings.Add("kitebros", true, "Reached Kitebros", "part1");
 	settings.Add("fireHose", true, "Fire Hose", "part1");
 	settings.Add("murphy", true, "Reached Murphy", "part1");
+	settings.Add("boltCutters", true, "Boltcutters", "part1");
 	
 	settings.Add("part2", true, "Part 2");
 	settings.Add("powerSubstation", true, "Reached Power Substation", "part2");
