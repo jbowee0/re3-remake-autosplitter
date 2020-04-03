@@ -7,6 +7,9 @@ state("re3", "1.0")
 	int map : "re3.exe", 0x054DB0F8, 0x88;
 	int bossHP : "re3.exe", 0x08D7A5A8, 0x30, 0x20, 0x300, 0x58;
 	int weapon1 : "re3.exe", 0x08D7C5E8, 0x50, 0x98, 0x10, 0x20, 0x18, 0x10, 0x14;
+	int weapon2 : "re3.exe", 0x08D7C5E8, 0x50, 0x98, 0x10, 0x28, 0x18, 0x10, 0x14;
+	int weapon3 : "re3.exe", 0x08D7C5E8, 0x50, 0x98, 0x10, 0x30, 0x18, 0x10, 0x14;
+	int weapon4 : "re3.exe", 0x08D7C5E8, 0x50, 0x98, 0x10, 0x38, 0x18, 0x10, 0x14;
 	long active :  0x08DAA3F0, 0x60, 0x18;
 	long cutscene :  0x08DAA3F0, 0x60, 0x20;
 	long paused :  0x08DAA3F0, 0x60, 0x30;
@@ -488,7 +491,7 @@ split
 			return settings["clockNemmy"];
 		}
 		
-		if (current.map == 243 && current.weapon1 != old.weapon1 && vars.defendedJill == 0)
+		if (current.map == 243 && current.weapon1 != 21 && current.weapon2 != 21 && current.weapon3 != 21 && current.weapon4 != 21 && vars.defendedJill == 0)
 		{
 			vars.defendedJill = 1;
 			return settings["defendedJill"];
