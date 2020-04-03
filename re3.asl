@@ -509,7 +509,7 @@ split
 			return settings["nest2"];
 		}
 		
-		if (current.map == 316 && current.bossHP < 1 && vars.disposalNemmy == 0)
+		if (current.map == 316 && !(current.bossHP >= 1) && vars.disposalNemmy == 0)
 		{
 			vars.disposalNemmy = 1;
 			return settings["disposalNemmy"];
