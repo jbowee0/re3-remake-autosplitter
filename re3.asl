@@ -516,7 +516,7 @@ split
 		return settings["flameNemmy"];
 	}
 	
-	if (current.map == 243 && character == 0 && vars.defendedJill == 0)
+	if (current.map == 243 && current.character == 0 && vars.defendedJill == 0)
 	{
 		vars.defendedJill = 1;
 		return settings["defendedJill"];
