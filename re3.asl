@@ -68,6 +68,7 @@ startup
 	settings.Add("cultureSample", true, "Culture Sample", "part6");
 	settings.Add("liquidTube", true, "Liquid Filled Test Tube", "part6");
 	settings.Add("vaccineBase", true, "Vaccine Base", "part6");
+	settings.Add("vaccineCompleted", false, "Vaccine", "part6");
 	settings.Add("disposalNemmy", true, "Nemesis 3 (Waste Disposal)", "part6");
 	settings.Add("finalNemmy", true, "Nemesis 4 (Final)", "part6");
 	settings.Add("end", true, "The Last Escape (End)", "part6");
@@ -171,6 +172,7 @@ update
 		vars.defendedJill = 0;
 		vars.hospitalLift = 0;
 		vars.nest2 = 0;
+		vars.vaccineCompleted = 0;
 		vars.disposalNemmy = 0;
 		vars.finalNemmy = 0;
 		vars.end = 0;
@@ -362,6 +364,15 @@ split
 					{
 						vars.boltCutters = 1;
 						return settings["boltCutters"];
+					}
+					break;
+				}
+				case 0x000000E9:
+				{
+					if (vars.vaccineCompleted == 0)
+					{
+						vars.vaccineCompleted = 1;
+						return settings["vaccineCompleted"];
 					}
 					break;
 				}
