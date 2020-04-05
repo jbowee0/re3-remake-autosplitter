@@ -72,9 +72,6 @@ startup
 	settings.Add("disposalNemmy", true, "Nemesis 3 (Waste Disposal)", "part6");
 	settings.Add("finalNemmy", true, "Nemesis 4 (Final)", "part6");
 	settings.Add("end", true, "The Last Escape (End)", "part6");
-	
-	settings.Add("nixtest", true, "Debug");
-	settings.Add("nixtestsplit", true, "Hi Levi", "nixtest");
 }
 
 init
