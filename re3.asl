@@ -379,6 +379,15 @@ split
 					}
 					break;
 				}
+				case 0x000000D9:
+				{
+					if (vars.defendedJill == 0)
+					{
+						vars.defendedJill = 1;
+						return settings["defendedJill"];
+					}
+					break;
+				}
                 default:
                 {
                     break; // No work to do.
@@ -528,12 +537,6 @@ split
 	{
 		vars.flameNemmy = 1;
 		return settings["flameNemmy"];
-	}
-	
-	if (current.map == 243 && current.character == 0 && vars.defendedJill == 0)
-	{
-		vars.defendedJill = 1;
-		return settings["defendedJill"];
 	}
 	
 	if (current.map == 316 && !(current.bossHP >= 1) && vars.disposalNemmy == 0)
