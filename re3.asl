@@ -74,7 +74,7 @@ startup
 	settings.Add("end", true, "The Last Escape (End)", "part6");
 	
 	settings.Add("nixtest", true, "Debug");
-	settings.Add("nixtestsplit", true, "NixIssues Debug", "nixtest");
+	settings.Add("nixtestsplit", true, "Hi Levi", "nixtest");
 }
 
 init
