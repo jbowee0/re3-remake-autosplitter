@@ -19,7 +19,7 @@ startup
 	settings.Add("escapedApartment", true, "Escaped Apartment", "part1");
 	settings.Add("byeBrad", true, "Escaped Bar Jack", "part1");
 	settings.Add("dario", true, "Met Dario", "part1");
-	settings.Add("garageRoof", true, "Parking Garage Roof", "part1");
+	settings.Add("garageRoof", true, "Parking Garage", "part1");
 	settings.Add("reachedSubway", true, "Reached Subway (first time)", "part1");
 	settings.Add("drinkOfWater", true, "Tall Drink of Water (cutscene)", "part1");
 	settings.Add("kitebros", true, "Reached Kitebros", "part1");
