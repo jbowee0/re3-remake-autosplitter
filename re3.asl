@@ -194,6 +194,21 @@ split
     {
         if (currentInventory[i] != oldInventory[i])
         {
+			switch (oldInventory[i])
+			{
+				case 0x000000D9:
+				{
+					if (vars.defendedJill == 0)
+					{
+						vars.defendedJill = 1;
+						return settings["defendedJill"];
+					}
+					break;
+				}
+				default:
+					break;
+			}
+			
 			switch (currentInventory[i])
             {
 				case 0x000000A1:
@@ -376,15 +391,7 @@ split
 					}
 					break;
 				}
-				case 0x000000D9:
-				{
-					if (vars.defendedJill == 0)
-					{
-						vars.defendedJill = 1;
-						return settings["defendedJill"];
-					}
-					break;
-				}
+				
                 default:
                 {
                     break; // No work to do.
