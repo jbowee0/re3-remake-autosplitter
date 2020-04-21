@@ -1,6 +1,6 @@
 //Resident Evil 3 Remake Autosplitter
 //By CursedToast 04/03/2020
-//Last updated 04/03/2020
+//Last updated 04/20/2020
 
 state("re3", "1.0")
 {
@@ -10,6 +10,16 @@ state("re3", "1.0")
 	long active :  0x08DAA3F0, 0x60, 0x18;
 	long cutscene :  0x08DAA3F0, 0x60, 0x20;
 	long paused :  0x08DAA3F0, 0x60, 0x30;
+}
+
+state("re3", "Cero Z 1.0")
+{
+	int map : "re3.exe", 0x054190F8, 0x88;
+	int bossHP : "re3.exe", 0x08CB8618, 0x30, 0x20, 0x300, 0x58;
+	int weapon1 : "re3.exe", 0x08CBA618, 0x50, 0x98, 0x10, 0x20, 0x18, 0x10, 0x14;
+	long active :  0x08CE8430, 0x60, 0x18;
+	long cutscene :  0x08CE8430, 0x60, 0x20;
+	long paused :  0x08CE8430, 0x60, 0x30;
 }
 
 startup
@@ -88,6 +98,10 @@ init
 		case (613351424):
 			version = "1.0";
 			vars.inventoryPtr = 0x08D7C5E8;
+			break;
+		case (640299008):
+			version = "Cero Z 1.0";
+			vars.inventoryPtr = 0x08CBA618;
 			break;
 	}
 
